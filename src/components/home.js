@@ -581,7 +581,7 @@ const Home = () => {
 
         {/* content */}
         <main className="p-4 md:ml-64 h-auto pt-20">
-          <div className="grid grid-cols-3 gap-4 mb-4 h-auto">
+          <div className="grid grid-cols-3 gap-4 mb-4">
             <div className="col-span-3 sm:col-span-2 border-2 border-dashed rounded-lg h-auto border-gray-300 dark:border-gray-600 h-96">
               <div className="m-4">
                 <div className="flex items-center mb-4">
@@ -944,39 +944,184 @@ const Home = () => {
               </nav>
             </div>
 
-            <div className="col-span-3 sm:col-span-1 border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96">
-              <p>HAAHAHAHAHAHHAH</p>
-              <div className="relative w-1/2 ml-2">
+            <div className="col-span-3 sm:col-span-1 mb-10 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96">
+              <div className="relative w-1/2 ml-2 m-4">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                  <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+                  <thead className="text-sm text-gray-700 bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                       <th scope="col" className="px-6 py-3">
-                        Product name
+                        Tags
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                      <th
-                        scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Apple MacBook Pro 17"
-                      </th>
-                    </tr>
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                      <th
-                        scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Microsoft Surface Pro
-                      </th>
-                    </tr>
-                    <tr className="bg-white dark:bg-gray-800">
-                      <th
-                        scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Magic Mouse 2
-                      </th>
-                    </tr>
+                    <div
+                      id="dropdown"
+                      class="z-10 w-56 p-3 bg-white rounded-lg shadow dark:bg-gray-700">
+                      <ul class="space-y-2 text-sm">
+                        <li class="flex items-center">
+                          <input
+                            id="apple"
+                            type="checkbox"
+                            value
+                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            for="apple"
+                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Apple (56)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="fitbit"
+                            type="checkbox"
+                            defaultValue
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="fitbit"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Fitbit (56)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="dell"
+                            type="checkbox"
+                            defaultValue
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="dell"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Dell (56)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="asus"
+                            type="checkbox"
+                            defaultValue
+                            defaultChecked
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="asus"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Asus (97)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="logitech"
+                            type="checkbox"
+                            defaultValue
+                            defaultChecked
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="logitech"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Logitech (97)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="msi"
+                            type="checkbox"
+                            defaultValue
+                            defaultChecked
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="msi"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            MSI (97)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="bosch"
+                            type="checkbox"
+                            defaultValue
+                            defaultChecked
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="bosch"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Bosch (176)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="sony"
+                            type="checkbox"
+                            defaultValue
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="sony"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Sony (234)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="samsung"
+                            type="checkbox"
+                            defaultValue
+                            defaultChecked
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="samsung"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Samsung (76)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="canon"
+                            type="checkbox"
+                            defaultValue
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="canon"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Canon (49)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="microsoft"
+                            type="checkbox"
+                            defaultValue
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="microsoft"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Microsoft (45)
+                          </label>
+                        </li>
+                        <li className="flex items-center">
+                          <input
+                            id="razor"
+                            type="checkbox"
+                            defaultValue
+                            className="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                          />
+                          <label
+                            htmlFor="razor"
+                            className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            Razor (49)
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </tbody>
                 </table>
               </div>
