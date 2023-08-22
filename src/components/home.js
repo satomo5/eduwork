@@ -47,7 +47,7 @@ const Home = () => {
                   alt="Flowbite Logo"
                 />
                 <span className="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">
-                  Eduwork Forum
+                   Forum
                 </span>
               </a>
               <form action="#" method="GET" className="hidden md:block md:pl-2">
@@ -277,10 +277,10 @@ const Home = () => {
                 id="dropdown">
                 <div className="py-3 px-4">
                   <span className="block text-sm font-semibold text-gray-900 dark:text-white">
-                    Erin
+                    Darren
                   </span>
                   <span className="block text-sm text-gray-900 truncate dark:text-white">
-                    erin.eduwork@gmail.com
+                    darren.ebs@gmail.com
                   </span>
                 </div>
                 <ul
@@ -372,7 +372,7 @@ const Home = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="/home"
                   className="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                     aria-hidden="true"
@@ -634,7 +634,7 @@ const Home = () => {
                   </div>
                   <div className="ml-2 mt-2 text-sm leading-loose md:w-3/4">
                     <a
-                      href="#"
+                      href="/detail"
                       className="font-medium text-2xl text-blue-600 dark:text-blue-500 hover:underline">
                       Creating real time web with socket.io
                     </a>
@@ -945,9 +945,10 @@ const Home = () => {
             </div>
 
             <div className="col-span-3 sm:col-span-1 mb-10 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96">
+              {/* tags  */}
               <div className="relative w-1/2 ml-2 m-4">
-                <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                  <thead className="text-sm text-gray-700 bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+                <table className="w-full text-sm text-left -mt-4 rounded-lg text-gray-500 dark:text-gray-400">
+                  <thead className="text-sm text-gray-700 rounded-lg bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                       <th scope="col" className="px-6 py-3">
                         Tags
@@ -1125,6 +1126,98 @@ const Home = () => {
                   </tbody>
                 </table>
               </div>
+
+              {/* filter */}
+              <details
+                open
+                className="ml-1.5 max-w-md w-fit overflow-hidden rounded-lg border border-gray-200 open:shadow-lg text-gray-700">
+                <summary className="flex cursor-pointer select-none items-center justify-between bg-gray-100 px-5 py-3 lg:hidden">
+                  <span className="text-sm font-medium"> Toggle Filters </span>
+                  <svg
+                    className="h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </summary>
+                <form
+                  action
+                  className="flex border-t border-gray-200 lg:border-t-0">
+                  <fieldset className="w-full">
+                    <legend className="block w-full bg-gray-50 px-5 py-3 text-xs font-medium">
+                      Filter by
+                    </legend>
+                    <div className="space-y-2 px-5 py-6">
+                      <div className="flex items-center">
+                        <input
+                          id="New"
+                          type="checkbox"
+                          name="type[New]"
+                          className="h-5 w-5 rounded border-gray-300"
+                          defaultChecked
+                        />
+                        <label
+                          htmlFor="New"
+                          className="ml-3 text-sm font-medium">
+                          {" "}
+                          Terbaru{" "}
+                        </label>
+                      </div>
+                      <div className="flex items-center">
+                        <input
+                          id="answered"
+                          type="checkbox"
+                          name="type[answered]"
+                          className="h-5 w-5 rounded border-gray-300"
+                        />
+                        <label
+                          htmlFor="answered"
+                          className="ml-3 text-sm font-medium">
+                          {" "}
+                          Terjawab{" "}
+                        </label>
+                      </div>
+                      <div className="flex items-center">
+                        <input
+                          id="used"
+                          type="checkbox"
+                          name="type[used]"
+                          className="h-5 w-5 rounded border-gray-300"
+                        />
+                        <label
+                          htmlFor="used"
+                          className="ml-3 text-sm font-medium">
+                          {" "}
+                          Belum terjawab{" "}
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+                <div className>
+                  <div className="flex justify-between border-t border-gray-200 px-5 py-3">
+                    <button
+                      name="reset"
+                      type="button"
+                      className="rounded text-xs font-medium text-gray-600 underline pr-8">
+                      Reset All
+                    </button>
+                    <button
+                      name="commit"
+                      type="button"
+                      className="rounded bg-blue-600 px-5 py-3 text-xs font-medium text-white active:scale-95">
+                      Apply Filters
+                    </button>
+                  </div>
+                </div>
+              </details>
             </div>
           </div>
         </main>
