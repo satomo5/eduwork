@@ -15,3 +15,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.code-section {
+  font-size: 14px;
+}
+
+.code-section p {
+  margin-bottom: 15px;
+}
+
+.code-section code {
+  font-size: 14px;
+  background-color: rgb(243, 244, 246);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
