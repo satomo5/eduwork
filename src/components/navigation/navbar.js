@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  
   return (
     <nav className="md:pl-40 md:pr-40 bg-blue-600 border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
       <div className="flex flex-wrap justify-between items-center">
@@ -10,7 +11,7 @@ const Navbar = () => {
             data-drawer-target="drawer-navigation"
             data-drawer-toggle="drawer-navigation"
             aria-controls="drawer-navigation"
-            className="p-2 mr-2 text-white rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            className={`${props.withoutSidebar ? 'hidden' : ''} p-2 mr-2 text-white rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}
           >
             <svg
               aria-hidden="true"
@@ -50,7 +51,7 @@ const Navbar = () => {
               Forum
             </span>
           </Link>
-          <form action="#" method="GET" className="hidden md:block md:pl-2">
+          <form method="GET" className="hidden md:block md:pl-2">
             <label htmlFor="topbar-search" className="sr-only">
               Search
             </label>

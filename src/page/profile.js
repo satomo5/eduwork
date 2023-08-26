@@ -30,8 +30,8 @@ const QuestionAnswerSection = (props) => {
                   className="block p-4 border-b hover:bg-gray-200 duration-150"
                   to={`/questions/${item.slug}`}
                 >
-                  <p className="font-semibold text-blue-600">{item.title}</p>
-                  <div className="flex items-center gap-4 text-gray-600 text-[12px]">
+                  <p className="font-semibold text-blue-600 mb-2">{item.title}</p>
+                  <div className="flex flex-wrap items-center gap-4 text-gray-600 text-[12px]">
                     <div className="flex items-center gap-2">
                       <FontAwesomeIcon icon={faComments} />
                       <p>{item.count?.comment || 0} Comments</p>

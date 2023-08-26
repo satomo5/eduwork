@@ -5,8 +5,8 @@ import Sidebar from "./sidebar";
 const Navigation = (props) => {
   return (
     <>
-      <Navbar />
-      {!props.withoutSidebar && <Sidebar />}
+      <Navbar withoutSidebar={props.withoutSidebar} />
+      <Sidebar withoutSidebar={props.withoutSidebar} />
     </>
   );
 };

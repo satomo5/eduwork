@@ -24,7 +24,6 @@ const AskQuestion = () => {
   const [form, setForm] = useState(INIT);
 
   const submit = () => {
-    console.log(form);
     setForm(INIT)
   }
   
